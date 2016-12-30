@@ -1,7 +1,6 @@
 ﻿#!/usr/bin/env python
 #coding: utf-8
 
-#https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration
 import time
 import csv
 
@@ -25,9 +24,9 @@ lines = []
 with open('test.txt','r') as f:
 	lines = f.readlines()
 
+driver = driver=webdriver.Ie(executable_path=r'.\browser-driver\IEDriverServer')
 for key in lines:
 	id_key = key.split('\t')	
-	driver = driver=webdriver.Ie(executable_path=r'.\browser-driver\IEDriverServer')
 	driver.get("http://xueshu.baidu.com/")
 	time.sleep(3)
 
@@ -50,11 +49,6 @@ for key in lines:
 		time.sleep(3)
 	except Exception as e:
 		pass
-	# span_more = driver.find_elements_by_tag_name("span")
-	# for span in span_more:
-	# 	if span.text == '更多':
-	# 		span.click()
-	# 		break
 	title = driver.find_element_by_tag_name("h3").text
 	author_text = get_element_by_class_name("author_text")
 	abstract = get_element_by_class_name("abstract")
@@ -66,8 +60,10 @@ for key in lines:
 	except:
 		sc_cite_cont = 0	
 	data = [id_key[0],title,author_text,abstract,publish_text,kw_main,sc_cite_cont]
-	# print(data)
+	if len(all_handles)>1:
+		driver.close()
+		driver.switch_to_window(all_handles[0])
 	with open("out.csv","a", newline='') as datacsv:
 	    csvwriter = csv.writer(datacsv,dialect=("excel"))
 	    csvwriter.writerow(data)
-	driver.quit()
+driver.quit()
