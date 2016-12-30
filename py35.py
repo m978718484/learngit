@@ -16,7 +16,7 @@ def	get_element_by_class_name(className):
 	except:
 		return ''
 
-header = ['標題','作者','摘要','出版源','關鍵詞','被引量']
+header = ['ID','標題','作者','摘要','出版源','關鍵詞','被引量']
 with open("out.csv","w", newline='') as datacsv:
     csvwriter = csv.writer(datacsv,dialect=("excel"))
     csvwriter.writerow(header)
@@ -25,12 +25,13 @@ lines = []
 with open('test.txt','r') as f:
 	lines = f.readlines()
 
-for key in lines:	
+for key in lines:
+	id_key = key.split('\t')	
 	driver = driver=webdriver.Ie(executable_path=r'.\browser-driver\IEDriverServer')
 	driver.get("http://xueshu.baidu.com/")
 	time.sleep(3)
 
-	driver.find_element_by_id("kw").send_keys(key)
+	driver.find_element_by_id("kw").send_keys(id_key[1])
 	driver.find_element_by_id("su").click()
 	author_text = get_element_by_class_name("author_text")
 	if author_text  == '':
@@ -43,23 +44,29 @@ for key in lines:
 	sc_cite_cont = None
 	if len(all_handles)>1:
 		driver.switch_to_window(all_handles[1])#如果窗口数大于1,切换到新窗口
-
-	span_more = driver.find_elements_by_tag_name("span")
-	for span in span_more:
-		if span.text == '更多':
-			span.click()
-			break
+	try:
+		span_more = driver.find_element_by_css_selector("i.c-icon.c-icon-triangle-down-d");
+		span_more.click()
+		time.sleep(3)
+	except Exception as e:
+		pass
+	# span_more = driver.find_elements_by_tag_name("span")
+	# for span in span_more:
+	# 	if span.text == '更多':
+	# 		span.click()
+	# 		break
 	title = driver.find_element_by_tag_name("h3").text
 	author_text = get_element_by_class_name("author_text")
 	abstract = get_element_by_class_name("abstract")
 	publish_text = get_element_by_class_name("publish_text")
 	kw_main = get_element_by_class_name("kw_main")
 	try:
-		sc_cite_cont = get_element_by_class_name("sc_cite_cont").text
+		sc_cite_cont =  driver.find_element_by_class_name("sc_cite_cont").text
+		print(sc_cite_cont)
 	except:
 		sc_cite_cont = 0	
-	data = [title,author_text,abstract,publish_text,kw_main,sc_cite_cont]
-	print(data)
+	data = [id_key[0],title,author_text,abstract,publish_text,kw_main,sc_cite_cont]
+	# print(data)
 	with open("out.csv","a", newline='') as datacsv:
 	    csvwriter = csv.writer(datacsv,dialect=("excel"))
 	    csvwriter.writerow(data)
