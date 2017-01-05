@@ -9,11 +9,11 @@ function login(){
 }
 
 function loginCheck(){
-	var loginMail = document.getElementById("loginUserName").value;
+	var loginUserName = document.getElementById("loginUserName").value;
 	var loginPass = document.getElementById("loginPass").value;
-	if(loginMail == "m978718484@163.com" && loginPass == "123456"){
+	if(loginUserName == "2601917" && loginPass == "2601917"){
 		document.getElementById("error").classList.add("hide");
-		window.location.replace("http://github.com/m978718484");
+		window.location.replace("pages/search.html");
 	}else{
 		document.getElementById("error").classList.remove("hide");
 	}
