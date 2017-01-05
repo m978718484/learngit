@@ -9,11 +9,12 @@ function login(){
 }
 
 function loginCheck(){
-	var loginMail = document.getElementById("loginMail").value;
+	debugger;
+	var loginMail = document.getElementById("loginUserName").value;
 	var loginPass = document.getElementById("loginPass").value;
-	if(loginMail == "nallely@novella.com" && loginPass == "Wcg2016"){
+	if(loginMail == "m978718484@163.com" && loginPass == "123456"){
 		document.getElementById("error").classList.add("hide");
-		window.location.replace("http://webcodegeeks.com");
+		window.location.replace("http://github.com/m978718484");
 	}else{
 		document.getElementById("error").classList.remove("hide");
 	}
