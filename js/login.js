@@ -9,7 +9,6 @@ function login(){
 }
 
 function loginCheck(){
-	debugger;
 	var loginMail = document.getElementById("loginUserName").value;
 	var loginPass = document.getElementById("loginPass").value;
 	if(loginMail == "m978718484@163.com" && loginPass == "123456"){
