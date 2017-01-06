@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>MinMaxSRS</title>
+    
+    <title>MinMaxSRS-公告动态</title>
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -21,16 +22,66 @@
             color:#778899;
             text-decoration:none;
         }
+        .center{
+          position: absolute;
+          top: 50%;
+          left: 45%;
+          transform: translate(-50%, -50%);
+        }
+        .left{
+          position: absolute;
+          top: 50%;
+          left: 15%;
+          transform: translate(-50%, -50%);
+        }
+        .right{
+          position: absolute;
+          top: 50%;
+          left: 75%;
+          transform: translate(-50%, -50%);
+        }
     </style>
   </head>
 
   <body>
-        <div id="header" class="container">
+    <div id="header" class="container">
     <nav class="navbar navbar-default navbar-fixed-top">
     <div class="navbar-inner navbar-content-center">
-    <p class="text-muted credit" style="padding: 10px;text-align:center;">
-    公告动态
-    </p>
+    <div class="left">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li class="nav-header">Nav header</li>
+          <li><a href="#">Separated link</a></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+    </div>
+    <div class="center">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li class="nav-header">Nav header</li>
+          <li><a href="#">Separated link</a></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+    </div>
+    <div class="right">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li class="nav-header">Nav header</li>
+          <li><a href="#">Separated link</a></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
     </div>
     </nav>
     </div>
