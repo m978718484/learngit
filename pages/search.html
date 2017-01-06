@@ -29,16 +29,13 @@
     <div id="footer" class="container">
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="navbar-inner navbar-content-center">
-                <div class="dropdownMenu style2 gradient">
-                <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><i class="ico-cat ico-cat1"></i>Products</a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="ico-cat ico-cat2"></i>Home</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="ico-cat ico-cat3"></i>Like</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="ico-cat ico-cat4"></i>Settings</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="ico-cat ico-cat5"></i>Messages</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="ico-cat ico-cat6"></i>Conversation</a></li>
-                </ul>
-                </div>
+            <select class="form-control">
+                <option value="" selected="selected">开始时间</option>
+                <option value="3">3天內</option>
+                <option value="7">1周內</option>
+                <option value="15">15天內</option>
+                <option value="30" selected="selected">1个月內</option>
+            </select>
             </div>
         </nav>
     </div>
