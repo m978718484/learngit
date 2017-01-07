@@ -6,7 +6,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->  
-    <title>MinMaxSRS-招标信息</title>
+    <title>MinMaxSRS-正在招标</title>
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
@@ -36,37 +36,28 @@
     </style>
   </head>
   <body>
-    <div id="header" class="container">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="navbar-inner navbar-content-center">
-                <select class="form-control input-lg">
-                   <option value="3" selected="selected">3天內</option>
-                   <option value="7">1周內</option>
-                   <option value="15">15天內</option>
-                   <option value="30">1个月內</option>
-                </select>
-            </div>
-        </nav>
-        </div>
-    <div class="container">
+      <div class="main_nav_bottom">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container" align="center">
+                    <ul class="nav nav-tabs nav-tabs-justified">
+                        <div class="row" align="center">
+                            <div class="col-md-4 col-sm-4 col-xs-4" align="center">
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4" align="center">
+                                <li>
+                                    <p class="side-menu">招标列表</p>
+                                </li>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4" align="center">
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+    </div> 
     <hr/>
     <!-- row -->
     <div class="row">
-        <a href = "../index.html" class = "list-group-item">
-              <div class = "category"><strong>项目类型：运输</strong></div>
-              <div class = "list-group-item-heading"><font color="#00BFFF">[济源]</font> 济源厂区A06阳极废水新增管道工程</div>
-              <div class = "startTime text-right" ><strong>开始时间：2016-05-15 12:32:00</strong></div>
-        </a>
-        <a href = "../index.html" class = "list-group-item">
-              <div class = "category"><strong>项目类型：运输</strong></div>
-              <div class = "list-group-item-heading"><font color="#00BFFF">[济源]</font> D区厂房卫生间供水管道保温设施维修工程</div>
-              <div class = "startTime"><strong>开始时间：2016-05-15 12:32:00</strong></div>
-        </a>
-        <a href = "../index.html" class = "list-group-item">
-              <div class = "category"><strong>项目类型：运输</strong></div>
-              <div class = "list-group-item-heading"><font color="#00BFFF">[济源]</font> 航空港区ABCDE区新增除油雾检修平台工程</div>
-              <div class = "startTime"><strong>开始时间：2016-05-15 12:32:00</strong></div>
-        </a>
         <a href = "../index.html" class = "list-group-item">
               <div class = "category"><strong>项目类型：运输</strong></div>
               <div class = "list-group-item-heading"><font color="#00BFFF">[兰考]</font> 航空港区E区重要设备机房防火门更换工程</div>
@@ -132,7 +123,7 @@
             window.location = "search.html"
         } 
         function center_side_menu_click() {
-            window.location = "bidding.html"
+            window.location = "search.html"
         } 
         function right_side_menu_click() {
             window.location = "../index.html"
