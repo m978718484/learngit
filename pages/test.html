@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <title>Main_Nav_Bottom</title>
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+         <script src="../js/jquery-1.11.3.js"></script>
+
+        <script src="../js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            function left_side_menu_click() {
+                window.location = "../index.html"
+            } 
+            function center_side_menu_click() {
+                window.location = "../index.html"
+            } 
+            function right_side_menu_click() {
+                
+            }
+        </script>
+    </head><!-- 在头部引入bootstrap的css包与js包 -->
+
+    <body>  
+        <div class="main_nav_bottom">
+                <nav class="navbar navbar-default navbar-fixed-bottom">
+                    <div class="container" align="center">
+                        <style>
+                        .nav-tabs
+                        {
+                            text-align: center;
+                            height: 20px;
+                            line-height: 40px;
+                        }
+                        </style>
+                        <ul class="nav nav-tabs nav-tabs-justified">
+                            <div class="row" align="center">
+                                <div class="col-md-4 col-sm-4 col-xs-4" align="center" style="border-right:inset;">
+                                    <li>
+                                        <p id="left-side-menu" onclick="left_side_menu_click();" href="#">公告动态</p>
+                                    </li>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4" align="center" onclick="center_side_menu_click();" style="border-right:inset;">
+                                    <li>
+                                        <p id="center-side-menu" href="#">招标信息</p>
+                                    </li>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4" align="center">
+                                    <li>
+                                        <p id="right-side-menu" onclick="right_side_menu_click();">我的招标</p>
+                                    </li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </nav>
+            </div>  
+    </body>
+</html>
