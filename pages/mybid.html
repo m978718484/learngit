@@ -5,10 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->  
-    <title>MinMaxSRS-正在招标</title>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>MinMaxSRS-我的招标</title>
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/jquery.min.js" > </script>
+    <script src="../js/bootstrap-tab.js"></script>
+    <script src="../js/bootstrap-transition.js"></script>
+    <script src="../js/bootstrap-button.js"></script>
+    <link rel="stylesheet" href="../css/typicons.min.css">
     <style type="text/css">
         .startTime{
             text-align:right;
@@ -27,64 +32,194 @@
             font-size: 15px;
             font-weight: bolder;
         }
-        .nav-tabs
+        #button-nav-tabs
         {
             text-align: center;
             height: 20px;
             line-height: 40px;
         }
     </style>
-  </head>
-  <body>
-    <div id="header" class="container">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="navbar-inner navbar-content-center">
-                <select class="form-control input-lg">
-                   <option value="3" selected="selected">3天內</option>
-                   <option value="7">1周內</option>
-                   <option value="15">15天內</option>
-                   <option value="30">1个月內</option>
-                </select>
+    </head>
+    <body>
+
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#home" data-toggle="tab">已报名</a></li>
+                <li><a href="#profile" data-toggle="tab">投标历史</a></li>
+                <li><a href="#messages" data-toggle="tab">消  息</a></li>
+                <li><a href="#settings" data-toggle="tab">设  置</a></li>
+            </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="home">
+          <a href = "../index.html" class = "list-group-item">
+              <div class = "category">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-bookmark">
+                      <i class="glyphicon glyphicon-bookmark">
+                      </i> 零星工程
+                  </div>
+                </strong>
+              </div>
+              <div class = "list-group-item-heading"></span><span class="typcn typcn-location"></span><font color="#00BFFF">[济源]</font> 济源厂区A06阳极废水新增管道工程</div>
+              <div class = "startTime text-right" >
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-time">
+                  <i class="glyphicon glyphicon-time">
+                  </i>
+                  2016-05-15 12:32:00
+                  </div>
+               </strong>
+              </div>
+        </a>
+        <a href = "../index.html" class = "list-group-item">
+              <div class = "category">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-bookmark">
+                      <i class="glyphicon glyphicon-bookmark">
+                      </i> 运输
+                  </div>
+                </strong>
+              </div>
+              <div class = "list-group-item-heading"><span class="typcn typcn-location"></span><font color="#00BFFF">[济源]</font> D区厂房卫生间供水管道保温设施维修工程</div>
+              <div class = "startTime">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-time">
+                  <i class="glyphicon glyphicon-time">
+                  </i>
+                  2016-05-15 12:32:00
+                  </div>
+               </strong>
+              </div>
+        </a>
+        <a href = "../index.html" class = "list-group-item">
+              <div class = "category">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-bookmark">
+                      <i class="glyphicon glyphicon-bookmark">
+                      </i> 废料
+                  </div>
+                </strong>
+              </div>
+              <div class = "list-group-item-heading"><span class="typcn typcn-location"></span><font color="#00BFFF">[济源]</font> 竞标网设定起始价升价竞标</div>
+              <div class = "startTime">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-time">
+                  <i class="glyphicon glyphicon-time">
+                  </i>
+                  2016-05-15 12:32:00
+                  </div>
+               </strong>
+              </div>
+        </a>
+        <a href = "../index.html" class = "list-group-item">
+              <div class = "category">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-bookmark">
+                      <i class="glyphicon glyphicon-bookmark">
+                      </i> 运输
+                  </div>
+                </strong>
+              </div>
+              <div class = "list-group-item-heading"><span class="typcn typcn-location"></span><font color="#00BFFF">[兰考]</font> 航空港区E区重要设备机房防火门更换工程</div>
+              <div class = "startTime">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-time">
+                  <i class="glyphicon glyphicon-time">
+                  </i>
+                  2016-05-15 12:32:00
+                  </div>
+               </strong>
+              </div>
+        </a>
+        <a href = "../index.html" class = "list-group-item">
+              <div class = "category">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-bookmark">
+                      <i class="glyphicon glyphicon-bookmark">
+                      </i> 运输
+                  </div>
+                </strong>
+              </div>
+              <div class = "list-group-item-heading"><span class="typcn typcn-location"></span><font color="#00BFFF">[郑州]</font> 航空港区ABCDE区新增除油雾检修平台工程</div>
+              <div class = "startTime">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-time">
+                  <i class="glyphicon glyphicon-time">
+                  </i>
+                  2016-05-15 12:32:00
+                  </div>
+               </strong>
+              </div>
+        </a>
+        <a href = "../index.html" class = "list-group-item">
+              <div class = "category">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-bookmark">
+                      <i class="glyphicon glyphicon-bookmark">
+                      </i> 运输
+                  </div>
+                </strong>
+              </div>
+              <div class = "list-group-item-heading"><span class="typcn typcn-location"></span><font color="#00BFFF">[郑州]</font> 楷峰签证</div>
+              <div class = "startTime">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-time">
+                  <i class="glyphicon glyphicon-time">
+                  </i>
+                  2016-05-15 12:32:00
+                  </div>
+               </strong>
+              </div>
+        </a>
+        <a href = "../index.html" class = "list-group-item">
+              <div class = "category">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-bookmark">
+                      <i class="glyphicon glyphicon-bookmark">
+                      </i> 运输
+                  </div>
+                </strong>
+              </div>
+              <div class = "list-group-item-heading"><span class="typcn typcn-location"></span><font color="#00BFFF">[鹤壁]</font> 鹤壁厂区冷凝器清洗委外维保</div>
+              <div class = "startTime">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-time">
+                  <i class="glyphicon glyphicon-time">
+                  </i>
+                  2016-05-15 12:32:00
+                  </div>
+               </strong>
+              </div>
+        </a>
+        <a href = "../index.html" class = "list-group-item">
+              <div class = "category">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-bookmark">
+                      <i class="glyphicon glyphicon-bookmark">
+                      </i> 运输
+                  </div>
+                </strong>
+              </div>
+              <div class = "list-group-item-heading"><span class="typcn typcn-location"></span><font color="#00BFFF">[成都]</font> 2017年成都厂区水池维保</div>
+              <div class = "startTime">
+                <strong>
+                  <div class="icon" data-class="glyphicon glyphicon-time">
+                  <i class="glyphicon glyphicon-time">
+                  </i>
+                  2016-05-15 12:32:00
+                  </div>
+               </strong>
+              </div>
+        </a>
             </div>
-        </nav>
-        </div>
-    <div class="container">
-    <hr/>
-    <!-- row -->
-    <div class="row">
-        <a href = "../index.html" class = "list-group-item">
-              <div class = "category"><strong>项目类型：运输</strong></div>
-              <div class = "list-group-item-heading"><font color="#00BFFF">[兰考]</font> 航空港区E区重要设备机房防火门更换工程</div>
-              <div class = "startTime"><strong>开始时间：2016-05-15 12:32:00</strong></div>
-        </a>
-        <a href = "../index.html" class = "list-group-item">
-              <div class = "category"><strong>项目类型：运输</strong></div>
-              <div class = "list-group-item-heading"><font color="#00BFFF">[郑州]</font> 航空港区ABCDE区新增除油雾检修平台工程</div>
-              <div class = "startTime"><strong>开始时间：2016-05-15 12:32:00</strong></div>
-        </a>
-        <a href = "../index.html" class = "list-group-item">
-              <div class = "category"><strong>项目类型：运输</strong></div>
-              <div class = "list-group-item-heading"><font color="#00BFFF">[郑州]</font> 楷峰签证</div>
-              <div class = "startTime"><strong>开始时间：2016-05-15 12:32:00</strong></div>
-        </a>
-        <a href = "../index.html" class = "list-group-item">
-              <div class = "category"><strong>项目类型：运输</strong></div>
-              <div class = "list-group-item-heading"><font color="#00BFFF">[鹤壁]</font> 鹤壁厂区冷凝器清洗委外维保</div>
-              <div class = "startTime"><strong>开始时间：2016-05-15 12:32:00</strong></div>
-        </a>
-        <a href = "../index.html" class = "list-group-item">
-              <div class = "category"><strong>项目类型：运输</strong></div>
-              <div class = "list-group-item-heading"><font color="#00BFFF">[成都]</font> 2017年成都厂区水池维保</div>
-              <div class = "startTime"><strong>开始时间：2016-05-15 12:32:00</strong></div>
-        </a>
-    </div>
-    <!--/ row -->
+            <div class="tab-pane" id="profile">2222</div>
+            <div class="tab-pane" id="messages">333</div>
+            <div class="tab-pane" id="settings">444.</div>
     </div>
     <hr/>
-    <div class="main_nav_bottom">
+  <div class="main_nav_bottom">
             <nav class="navbar navbar-default navbar-fixed-bottom">
                 <div class="container" align="center">
-                    <ul class="nav nav-tabs nav-tabs-justified">
+                    <ul id="button-nav-tabs" class="nav nav-tabs nav-tabs-justified">
                         <div class="row" align="center">
                             <div class="col-md-4 col-sm-4 col-xs-4" align="center" style="border-right:inset;">
                                 <li>
@@ -106,22 +241,16 @@
                 </div>
             </nav>
     </div>  
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../js/jquery-1.11.3.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../js/bootstrap.min.js"></script>
-    <!-- Login and register -->
-    <script src="../js/login.js"></script>
     <script type="text/javascript">
         function left_side_menu_click() {
             window.location = "search.html"
         } 
         function center_side_menu_click() {
-            window.location = "search.html"
+            window.location = "bidding.html"
         } 
         function right_side_menu_click() {
-            window.location = "../index.html"
+            window.location = "mybid.html"
         }
     </script>
-  </body>
+    </body>
 </html>
