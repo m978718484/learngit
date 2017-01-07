@@ -5,19 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->  
     <title>MinMaxSRS-公告动态</title>
-
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-
     <style type="text/css">
         .startTime{
             text-align:right;
         }
-
         .startTime,.category{
             font-family:  "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
             color:#6E7B8B;
@@ -27,11 +22,16 @@
             font-size: 15px;
             font-weight: bolder;
         }
+        .nav-tabs
+        {
+            text-align: center;
+            height: 20px;
+            line-height: 40px;
+        }
     </style>
   </head>
   <body>
-
-            <div id="header" class="container">
+    <div id="header" class="container">
             <nav class="navbar navbar-default navbar-fixed-top">
             <div class="navbar-inner navbar-content-center">
             <select class="form-control input-lg">
@@ -91,111 +91,48 @@
         </div>
         <!--/ row -->
     </div>
-            <hr/>
-
-            <div id="menu">
-                <ul>
-                    <li>
-                        <div class="menu_li"><img src="../images/coin.png" width="10" />&nbsp;网页特效</div>
-                        <img class="line" src="../images/line.png" width="1">
-                        <span>
-                            <img src="../images/navbg4.png" width="100%">
-                            <div>
-                                <a href="http://www.17sucai.com">html5模板</a>
-                                <a href="http://www.17sucai.com">手机js特效</a>
-                                <a href="http://www.17sucai.com">微测试</a>
-                                <a href="http://www.17sucai.com">微游戏</a>
+        <hr/>
+        <div class="main_nav_bottom">
+                <nav class="navbar navbar-default navbar-fixed-bottom">
+                    <div class="container" align="center">
+                        <ul class="nav nav-tabs nav-tabs-justified">
+                            <div class="row" align="center">
+                                <div class="col-md-4 col-sm-4 col-xs-4" align="center" style="border-right:inset;">
+                                    <li>
+                                        <p id="left-side-menu" onclick="left_side_menu_click();" href="#">公告动态</p>
+                                    </li>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4" align="center" onclick="center_side_menu_click();" style="border-right:inset;">
+                                    <li>
+                                        <p id="center-side-menu" href="#">招标信息</p>
+                                    </li>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4" align="center">
+                                    <li>
+                                        <p id="right-side-menu" onclick="right_side_menu_click();">我的招标</p>
+                                    </li>
+                                </div>
                             </div>
-                        </span>
-                    </li>
-                    <li>
-                        <div class="menu_li"><img src="../images/coin.png" width="10" />&nbsp;手机特效</div>
-                        <img class="line" src="../images/line.png" width="1" />
-                        <span>
-                            <img src="../images/navbg4.png" width="100%" />
-                            <div>
-                            <a href="http://www.17sucai.com">咨询购买</a>
-                            <a href="http://www.17sucai.com">咨询购买</a>
-                            <a href="http://www.17sucai.com">咨询购买</a>
-                            <a href="http://www.17sucai.com">咨询购买</a>
-                            </div>
-                        </span>
-                    </li>
-                    <li>
-                        <div class="menu_li"><img src="../images/coin.png" width="10" />&nbsp;手机app</div>
-                        <span>
-                            <img src="../images/navbg5.png" width="100%">
-                            <div>
-                                <a href="http://www.17sucai.com">咨询购买</a>
-                                <a href="http://www.17sucai.com">咨询购买</a>
-                                <a href="http://www.17sucai.com">咨询购买</a>
-                                <a href="http://www.17sucai.com">咨询购买</a>
-                                <a href="http://www.17sucai.com">咨询购买</a>
-                            </div>
-                        </span>
-                    </li>
-                </ul>
-            </div>
+                        </ul>
+                    </div>
+                </nav>
+        </div>  
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <script src="../js/jquery-1.11.3.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../js/bootstrap.min.js"></script>
     <!-- Login and register -->
     <script src="../js/login.js"></script>
-    <script src="../js/bootstrap-combobox.min.js"></script>
     <script type="text/javascript">
-        var x = $("#combo").btComboBox().on('change', function() {
-                console.log($(this).btComboBox('value'));
-        });
-    </script>
-
-    <style type="text/css">
-*{margin:0;padding:0;}
-a,img{border:0;}
-
-#menu{position:fixed;bottom:0px;width:100%;height:44px;line-height:44px;z-index:999;background:url(../images/menubg.png) repeat-x;}
-#menu ul{margin:0 auto;list-style-type:none;width:100%;max-width:500px;height:100%;}
-#menu ul li{float:left;width:33.3%;height:100%;text-align:center;position:relative;font-size:14px;}
-#menu ul li .line{position:absolute;top:0px;right:0px;z-index:30;}
-#menu ul li .menu_li{position:absolute;top:0px;left:0px;z-index:20;width:100%;height:100%;color:#454545;background:url(../images/menubg.png) repeat-x;}
-#menu ul li .img_front{position:absolute;top:0px;left:0px;z-index:30;width:100%;height:100%;}
-#menu ul li .img_front img{width:100%;height:100%;}
-#menu ul li span{position:absolute;bottom:-300px;left:50%;width:104px;margin-left:-52px;margin-bottom:14px;height:auto;text-align:center;z-index:10;}
-#menu ul li span div{position:absolute;top:0px;left:0px;}
-#menu ul li span a{float:left;width:100%;height:43px;line-height:43px;color:#454545;text-decoration:none;}
-
-.footer_front{position:fixed;width:100%;height:100%;top:0px;left:0px;z-index:888;display:none;}
-</style>
-
-<script type="text/javascript">
-window.onload = function(){
-    $('#menu ul li').each(function(j){
-        $('#menu ul li').eq(j).removeClass("on");
-        $('#menu ul li span').eq(j).animate({bottom:-$('#menu ul li span').eq(j).height()},100);
-    });
-}
-
-$('#menu ul li').each(function(i){
-    $(this).click(function(){
-        if($(this).attr("class")!="on"){
-            $('#menu ul .on span').animate({bottom:-$('#menu ul .on span').height()},200);
-            $('#menu ul .on').removeClass("on");
-            $(this).addClass("on");
-            $('#menu ul li span').eq(i).animate({bottom:35},200);
-            $('.footer_front').show();
-        }else{
-            $('#menu ul li span').eq(i).animate({bottom:-$('#menu ul li span').eq(i).height()},200);
-            $(this).removeClass("on");
-            $('.footer_front').hide();
+        function left_side_menu_click() {
+            window.location = "search.html"
+        } 
+        function center_side_menu_click() {
+            window.location = "search.html"
+        } 
+        function right_side_menu_click() {
+            window.location = "../index.html"
         }
-    });
-});
-
-$('.footer_front').click(function(){
-    $('#menu ul .on span').animate({bottom:-$('#menu ul .on span').height()},200);
-    $('#menu ul .on').removeClass("on");
-    $(this).hide();
-});
-</script>
+    </script>
   </body>
 </html>
