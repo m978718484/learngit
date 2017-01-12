@@ -174,7 +174,7 @@
             </div>
         </div>
 
-        <div class="panel panel-default">
+        <div id="navbar" class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
@@ -182,7 +182,7 @@
                 竞标情况
                 </a>
                 </h4>
-                </div>
+            </div>
             <div id="collapseFour" class="panel-collapse collapse">
                 <div class="panel-body">
                 <div class="row">
@@ -239,9 +239,15 @@
     </div>  
         <script type="text/javascript">
         $(function(){
-            $('a[data-toggle="collapse"]').on('shown.bs.collapse', function (e) {
-     
-            });
+           var $navbar = $('#navbar');
+            $navbar.on('hidden.bs.collapse', function () {
+                var a = this.childNodes[1].childNodes[1].childNodes[1].childNodes[1];
+                a.setAttribute("class", "glyphicon glyphicon-plus"); 
+            })
+            $navbar.on('shown.bs.collapse', function () {
+                var a = this.childNodes[1].childNodes[1].childNodes[1].childNodes[1];
+                a.setAttribute("class", "glyphicon glyphicon-minus"); 
+            })
         });
         function left_side_menu_click() {
             window.location = "search.html"
