@@ -117,7 +117,7 @@
             <div class="panel-heading">
                 <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                <i  class="glyphicon glyphicon-plus"></i>
+                <i  class="glyphicon glyphicon-minus"></i>
                 竞标价格
                 </a>
                 </h4>
@@ -239,7 +239,7 @@
     </div>  
         <script type="text/javascript">
         $(function(){
-           var $navbar = $('#navbar');
+           var $navbar = $('.panel.panel-default');
             $navbar.on('hidden.bs.collapse', function () {
                 var a = this.childNodes[1].childNodes[1].childNodes[1].childNodes[1];
                 a.setAttribute("class", "glyphicon glyphicon-plus"); 
