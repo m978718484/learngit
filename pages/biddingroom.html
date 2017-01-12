@@ -292,6 +292,7 @@
 
             $('#myModal').on('shown.bs.modal', function() {
                 $('#inputSuccess').focus();
+                $('#inputSuccess').click();
             })
             var number = $("#inputSuccess").on('input',function(e){
                   this.value = this.value.replace(/[^0-9]/g,'');
