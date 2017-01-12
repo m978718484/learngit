@@ -145,7 +145,7 @@
                         <div class="col-xs-8"><a id="leavetime"></a> </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-9" style="text-align: center;">
+                        <div class="col-xs-8">
                         12.50% + ( 0.5 * 
                         <!-- 按钮触发模态框 -->
                         <button type="button" class="btn-primary" id="myModalText" data-toggle="modal" data-target="#myModal">
@@ -164,24 +164,25 @@
                                         </h4>
                                     </div>
                                     <div class="modal-body ">
-                                    <input type="number" value="" size="16" id="inputSuccess">
-                             <!--            <div class="form-group" id="number">
+                                        <div class="form-group" id="number">
                                             <div class="col-sm-10">
                                                 <input type="text" class="form-control" id="inputSuccess">
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">確定
-                                        </button>
+                                        <center>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">確定
+                                            </button>
+                                        </center>
                                     </div>
                                 </div><!-- /.modal-content -->
                             </div><!-- /.modal -->
                         </div>
 
-                         > )% = <i id="result">ii</i>
+                         > )% = <i id="result"></i>
                         </div>
-                        <div class="col-xs-3"><button type="button" class="btn btn-secondary">保 存</button></div>
+                        <div class="col-xs-4" style="text-align: right;"><button type="button" class="btn btn-secondary">保 存</button></div>
                     </div>
                 </div>
             </div>
@@ -289,19 +290,17 @@
                 a.setAttribute("class", "glyphicon glyphicon-minus"); 
             });
 
-            $('#myModal').on('hidden', function () {
-              // do something…
-              debugger;
+            $('#myModal').on('shown.bs.modal', function() {
+                $('#inputSuccess').focus();
             })
-
-        var number = $("#inputSuccess").on('input',function(e){
-              this.value = this.value.replace(/[^0-9]/g,'');
-              if (this.value>100||this.value==0) {
-                this.value="";
-              }
-            $("#myModalText").text(this.value);
-            $("#result").text(this.value);
-            });  
+            var number = $("#inputSuccess").on('input',function(e){
+                  this.value = this.value.replace(/[^0-9]/g,'');
+                  if (this.value>100||this.value==0) {
+                    this.value="";
+                  }
+                $("#myModalText").text(this.value);
+                $("#result").text(this.value);
+                });  
         });
         function left_side_menu_click() {
             window.location = "search.html"
