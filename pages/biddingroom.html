@@ -142,7 +142,44 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-4" style="text-align: right;"><span>降价幅度</span></div>
-                        <div class="col-xs-8"><a id="leavetime">1</a> </div>
+                        <div class="col-xs-8"><a id="leavetime"></a> </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-8" style="text-align: center;">
+                        12.50% + ( 0.5 * 
+                        <!-- 按钮触发模态框 -->
+                        <button type="button" class="btn-primary" data-toggle="modal" data-target="#myModal">
+                            ___
+                        </button>
+                        <!-- 模态框（Modal） -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            &times;
+                                        </button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            模态框（Modal）标题
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        在这里添加一些文本
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                        </button>
+                                        <button type="button" class="btn btn-primary">
+                                            提交更改
+                                        </button>
+                                    </div>
+                                </div><!-- /.modal-content -->
+                            </div><!-- /.modal -->
+                        </div>
+
+                         > )% = <i id="result">ii</i>
+                        </div>
+                        <div class="col-xs-4"><button type="button" class="btn btn-secondary">保 存</button></div>
                     </div>
                 </div>
             </div>
@@ -211,6 +248,7 @@
 
 
     </div>
+
      <hr/>
     <div class="main_nav_bottom">
             <nav class="navbar navbar-default navbar-fixed-bottom">
@@ -243,11 +281,24 @@
             $navbar.on('hidden.bs.collapse', function () {
                 var a = this.childNodes[1].childNodes[1].childNodes[1].childNodes[1];
                 a.setAttribute("class", "glyphicon glyphicon-plus"); 
-            })
+            });
             $navbar.on('shown.bs.collapse', function () {
                 var a = this.childNodes[1].childNodes[1].childNodes[1].childNodes[1];
                 a.setAttribute("class", "glyphicon glyphicon-minus"); 
-            })
+            });
+
+            var text_box_click = $("#numbersOnly").click(function(){
+
+        });
+
+        var number = $("#number").on('input',function(e){
+              this.value = this.value.replace(/[^0-9]/g,'');
+              if (this.value>100||this.value==0) {
+                this.value="";
+              }
+            $("#numbersOnly").val(this.value);
+            $("#result").text(this.value);
+            });  
         });
         function left_side_menu_click() {
             window.location = "search.html"
