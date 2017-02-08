@@ -1,0 +1,144 @@
+<html>
+<head>
+    <title>MinMaxSRS-标案详情</title>
+    <meta charset="utf-8">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../css/typicons.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <script src="../js/jquery.min.js" > </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->  
+    <style type="text/css">
+        .side-menu{
+            font-family: "Microsoft YaHei","黑体","宋体",sans-serif;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+        .list-group-item-heading{
+            font-size: 15px;
+            font-weight: bolder;
+        }
+        .nav-tabs
+        {
+            text-align: center;
+            height: 20px;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header" class="container">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-inner navbar-content-center">
+                <button type="button" class="form-control btn btn-secondary input-lg btn-success">我要报名</button>
+            </div>
+        </nav>
+    </div>
+    <hr/>
+    <hr/>
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-4 col-sm-4">工程名称：</div>
+          <div class="col-xs-8 col-sm-8">航空港区A05栋1楼新制程新增消防设施工程/港区A03楼1楼西侧码头治具仓新增烟感工程/港区A07栋1楼北一门消火</div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4">厂  区：</div>
+          <div class="col-xs-8 col-sm-8">郑州</div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4">标  号：</div>
+          <div class="col-xs-8 col-sm-8">ZGWZH16105046</div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4">招标部门：</div>
+          <div class="col-xs-8 col-sm-8">CAA文周边群总务总处工务服务处发包采购中心部</div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4">招标类型：</div>
+          <div class="col-xs-8 col-sm-8">零星工程</div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4">开始时间：</div>
+          <div class="col-xs-8 col-sm-8">2016-12-13 10:40:00 </div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4">结束时间：</div>
+          <div class="col-xs-8 col-sm-8">2016-12-13 10:50:00 </div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4">描  述：</div>
+          <div class="col-xs-8 col-sm-8"></div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4">竞标方式：</div>
+          <div class="col-xs-8 col-sm-8">按供应商提供的初次报价竞标, 每次输入的降幅为百分比, 排名以累计降幅从大到小</div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4">联 系 人：</div>
+          <div class="col-xs-8 col-sm-8">任敏敏</div>
+        </div>
+        <hr/>
+        <div class="row">
+          <div class="col-xs-4 col-sm-4">联系人电话：</div>
+          <div class="col-xs-8 col-sm-8">579-79246</div>
+        </div>
+    </div>
+     <hr/>
+     <hr/>
+    <div class="main_nav_bottom">
+            <nav class="navbar navbar-default navbar-fixed-bottom">
+                <div class="container" align="center">
+                    <ul class="nav nav-tabs nav-tabs-justified">
+                        <div class="row" align="center">
+                            <div class="col-md-4 col-sm-4 col-xs-4" align="center" style="border-right:inset;">
+                                <li>
+                                    <p id="left-side-menu" class="side-menu" onclick="left_side_menu_click();">招标信息</p>
+                                </li>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4" align="center" style="border-right:inset;">
+                                <li>
+                                    <p id="center-side-menu" class="side-menu" onclick="center_side_menu_click();">正在招标</p>
+                                </li>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4" align="center">
+                                <li>
+                                    <p id="right-side-menu" class="side-menu" onclick="right_side_menu_click();">我的招标</p>
+                                </li>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+    </div> 
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Login and register -->
+    <script src="../js/login.js"></script>
+    <script type="text/javascript">
+        function left_side_menu_click() {
+            window.location = "search.html"
+        } 
+        function center_side_menu_click() {
+            window.location = "biddinglist.html"
+        } 
+        function right_side_menu_click() {
+            window.location = "mybid.html"
+        }
+    </script>
+</body>
+</html>
